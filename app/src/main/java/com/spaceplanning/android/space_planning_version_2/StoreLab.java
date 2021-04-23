@@ -20,7 +20,7 @@ public class StoreLab {
         mStores = new ArrayList<>();
         for(int i=0; i< 50; i++){
             Store store = new Store();
-            store.setStoreReviewTitle("가게이름 #"+i);
+            store.setStoreName("가게이름 #"+i);
             mStores.add(store);
         }
     }

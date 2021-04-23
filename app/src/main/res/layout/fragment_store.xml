@@ -1,42 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/store_name"
-        style="?android:listSeparatorTextViewStyle"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/store_host_name"
-        style="?android:listSeparatorTextViewStyle"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/store_number"
-        style="?android:listSeparatorTextViewStyle"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/store_location"
-        style="?android:listSeparatorTextViewStyle"/>
+        android:orientation="horizontal">
 
-    <TextView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_name"
+            style="?android:listSeparatorTextViewStyle"
+            android:layout_weight="1"
+            android:ems="10"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/storename"
+            android:ems="10"
+            android:layout_weight="1"
+            style="?android:listSeparatorTextViewStyle"/>
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/store_Date_details_label"
-        style="?android:listSeparatorTextViewStyle"/>
-    <Button
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_host_name"
+            style="?android:listSeparatorTextViewStyle"
+            android:layout_weight="1"
+            android:ems="10"/>
+        <TextView
+            android:id="@+id/storehostname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_weight="1"
+            style="?android:listSeparatorTextViewStyle"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/storeuseddate"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_number"
+            style="?android:listSeparatorTextViewStyle"
+            android:ems="10"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/stroenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_weight="1"
+            style="?android:listSeparatorTextViewStyle"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_location"
+            style="?android:listSeparatorTextViewStyle"
+            android:ems="10"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/storelocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:listSeparatorTextViewStyle"
+            android:ems="10"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_Date_details_label"
+            style="?android:listSeparatorTextViewStyle"
+            android:ems="10"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/storeuseddate"
+            android:ems="10"
+            android:layout_weight="1"/>
+    </LinearLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

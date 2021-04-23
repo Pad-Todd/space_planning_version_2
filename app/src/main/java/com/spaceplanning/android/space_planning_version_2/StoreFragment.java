@@ -8,21 +8,38 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.UUID;
+
 public class StoreFragment extends Fragment {
+    private static final String ARG_Store_ID = "store_id";
     private Store mStore;
+    private TextView mStoreName;
     private EditText mStoreReviewTitleField;
     private EditText mStoreReviewDetailField;
-    private Button mDateButton;
+    private Button mStoreUsedDateButton;
+
+    public static StoreFragment newInsatnce(UUID storeId){
+        Bundle args = new Bundle();
+        args.putSerializable(ARG_Store_ID, storeId);
+
+        StoreFragment storeFragment = new StoreFragment();
+        storeFragment.setArguments(args);
+        return storeFragment;
+    }
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mStore = new Store();
+        UUID storeId = (UUID) getArguments().getSerializable(ARG_Store_ID);
+
+        mStore = StoreLab.get(getActivity()).getStore(storeId);
     }
 
     @Nullable
@@ -31,8 +48,9 @@ public class StoreFragment extends Fragment {
                              @Nullable Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_store, container, false);
-        mStoreReviewTitleField = (EditText)view.findViewById(R.id.storereviewtitle);
-        mStoreReviewTitleField.addTextChangedListener(new TextWatcher() {
+        mStoreName = (TextView) view.findViewById(R.id.storename);
+        mStoreName.setText(mStore.getStoreName());
+        mStoreName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -48,27 +66,10 @@ public class StoreFragment extends Fragment {
 
             }
         });
-        mStoreReviewDetailField = (EditText)view.findViewById(R.id.storereviewdetail);
-        mStoreReviewDetailField.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mStore.setStoreReviewDetail(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        mDateButton = (Button)view.findViewById(R.id.storeuseddate);
-        mDateButton.setText(mStore.getDate().toString());
-        mDateButton.setEnabled(false);
-
+        mStoreUsedDateButton = (Button)view.findViewById(R.id.storeuseddate);
+        mStoreUsedDateButton.setText(mStore.getDate().toString());
+        mStoreUsedDateButton.setEnabled(false);
 
         return view;
     }

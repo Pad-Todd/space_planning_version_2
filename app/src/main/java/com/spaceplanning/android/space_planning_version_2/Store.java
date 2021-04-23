@@ -8,6 +8,8 @@ public class Store {
     private String mStoreReviewTitle;
     private String mStoreReviewDetail;
     private Date mDate;
+    private String mStoreName;
+    private String mStoreNumber;
 
     public Store(){
         mId = UUID.randomUUID();
@@ -40,5 +42,21 @@ public class Store {
 
     public void setDate(Date date) {
         mDate = date;
+    }
+
+    public String getStoreName() {
+        return mStoreName;
+    }
+
+    public void setStoreName(String storeName) {
+        mStoreName = storeName;
+    }
+
+    public String getStoreNumber() {
+        return mStoreNumber;
+    }
+
+    public void setStoreNumber(String storeNumber) {
+        mStoreNumber = storeNumber;
     }
 }
