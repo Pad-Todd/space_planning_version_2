@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity{
 
     private static final int RC_SIGN_IN = 1000;
     private static List<AuthUI.IdpConfig> providers = null;
+
+    public static FirebaseUser mUserInfo;
     // Bottom-Bar
     private BottomNavigationView mBottomNV;
     @Override
@@ -106,13 +109,16 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
+        Log.d("text", "check onActivityResult");
         if (requestCode == RC_SIGN_IN) {
             IdpResponse response = IdpResponse.fromResultIntent(data);
-
             if (resultCode == RESULT_OK) {
                 // Successfully signed in
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                Log.d("text", user.getDisplayName());
+                if(user != null) {
+                    changelogInfo(user);
+                }
                 // ...
             } else {
                 // Sign in failed. If response is null the user canceled the
@@ -121,6 +127,13 @@ public class MainActivity extends AppCompatActivity{
                 // ...
             }
         }
+    }
+
+    private void changelogInfo(FirebaseUser user) {
+        Button loginInfo = (Button) findViewById(R.id.log_info);
+        loginInfo.setText(user.getDisplayName());
+        mUserInfo = user;
+
     }
 
 

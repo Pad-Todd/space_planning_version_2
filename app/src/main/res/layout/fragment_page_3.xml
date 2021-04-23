@@ -4,14 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Page_3"
-        android:textSize="100dp"/>
+        android:text="User Info"
+        android:textSize="48dp"/>
+
+    <LinearLayout
+        android:id="@+id/user_info_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/user_info_layout_left_item"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/left_item_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name "
+                android:textSize="24dp">
+            </TextView>
+            <TextView
+                android:id="@+id/left_item_user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email "
+                android:textSize="24dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/user_info_layout_right_item"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp">
+            <TextView
+                android:id="@+id/right_item_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="24dp">
+            </TextView>
+            <TextView
+                android:id="@+id/right_item_user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email "
+                android:textSize="24dp">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
 
 
 

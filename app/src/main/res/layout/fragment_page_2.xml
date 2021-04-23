@@ -13,6 +13,8 @@
         android:text="Page_2"
         android:textSize="100dp"/>
 
+    <RecyclerView></RecyclerView>
+
 
 
 </LinearLayout>

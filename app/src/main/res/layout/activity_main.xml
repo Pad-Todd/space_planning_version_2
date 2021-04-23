@@ -17,15 +17,23 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             android:theme="@style/Theme.AppCompat">
-
-            <TextView
-                android:gravity="center"
+            <LinearLayout
+                android:id="@+id/login_check_bar"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Space Planning"
-                android:textStyle="bold"
-                android:textColor="#fff"
-                android:textSize="30dp" />
+                android:layout_height="wrap_content">
+                <Button
+                    android:gravity="right"
+                    android:id="@+id/log_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="login"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+
 
         </androidx.appcompat.widget.Toolbar>
 
