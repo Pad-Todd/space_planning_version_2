@@ -2,4 +2,15 @@
     <string name="app_name">space_planning_version_2</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="store_name">상호명</string>
+    <string name="store_host_name">사업자명</string>
+    <string name="store_number">전화번호</string>
+    <string name="store_location">위치</string>
+    <string name="store_review_title_hint">리뷰 제목을 입력해주세요.</string>
+    <string name="store_review_detail_hint">리뷰 내용을 입력해주세요.</string>
+    <string name="store_review_title_label">리뷰 제목</string>
+    <string name="store_review_detail_label">리뷰 내용</string>
+    <string name="store_Date_details_label">시공 날짜</string>
+    <string name="title_activity_store">StoreActivity</string>
+
 </resources>
