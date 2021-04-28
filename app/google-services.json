@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "433911272967",
+    "firebase_url": "https://fir-test-f30e4-default-rtdb.firebaseio.com",
+    "project_id": "fir-test-f30e4",
+    "storage_bucket": "fir-test-f30e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433911272967:android:97b3b079ab4cfb1e75bca2",
+        "android_client_info": {
+          "package_name": "com.bignerdranch.android.firebaseassistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433911272967-or807i9oahsrts456obgijuq87837t5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJzVD13u4IdoueD4UFKCfKiSqGTEZKUlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433911272967-or807i9oahsrts456obgijuq87837t5k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433911272967:android:a4521aab972df89c75bca2",
+        "android_client_info": {
+          "package_name": "com.spaceplanning.android.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433911272967-or807i9oahsrts456obgijuq87837t5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJzVD13u4IdoueD4UFKCfKiSqGTEZKUlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433911272967-or807i9oahsrts456obgijuq87837t5k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433911272967:android:7d33dadef2c98de575bca2",
+        "android_client_info": {
+          "package_name": "com.spaceplanning.android.space_planning_version_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433911272967-or807i9oahsrts456obgijuq87837t5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJzVD13u4IdoueD4UFKCfKiSqGTEZKUlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433911272967-or807i9oahsrts456obgijuq87837t5k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
