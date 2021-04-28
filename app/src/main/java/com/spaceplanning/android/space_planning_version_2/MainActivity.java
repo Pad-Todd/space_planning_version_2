@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
@@ -22,6 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class MainActivity extends AppCompatActivity{
 
     private static final int RC_SIGN_IN = 1000;
@@ -30,6 +32,11 @@ public class MainActivity extends AppCompatActivity{
     public static FirebaseUser mUserInfo;
     // Bottom-Bar
     private BottomNavigationView mBottomNV;
+    // Menu-Btn & Menu-List
+    private static Button mMenuBtn;
+    private static LinearLayout mMenuBar;
+    private FragmentManager mFragmentManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +53,21 @@ public class MainActivity extends AppCompatActivity{
             }
         });
         mBottomNV.setSelectedItemId(R.id.navigation_1);
+        mMenuBtn = (Button)findViewById(R.id.menu_btn);
+        mMenuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("text", "text-fuck " + String.valueOf(mMenuBar));
+                mMenuBar = (LinearLayout) findViewById(R.id.menu_bar);
+                if(mMenuBar.getVisibility() == View.GONE){
+                    mMenuBar.setVisibility(View.VISIBLE);
+                } else if(mMenuBar.getVisibility() == View.VISIBLE) {
+                    mMenuBar.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
     }
 
     private void BottomNavigate(int itemId) {
@@ -65,7 +87,9 @@ public class MainActivity extends AppCompatActivity{
                 fragment = new FragmentPage1();
 
             } else if (itemId == R.id.navigation_2){
-                fragment = new FragmentPage2();
+                fragment = new StoreListFragment();
+
+
             }else {
                 fragment = new FragmentPage3();
             }
@@ -77,6 +101,7 @@ public class MainActivity extends AppCompatActivity{
         fragmentTransaction.setPrimaryNavigationFragment(fragment);
         fragmentTransaction.setReorderingAllowed(true);
         fragmentTransaction.commitNow();
+
     }
 
     private void signin() {

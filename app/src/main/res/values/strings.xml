@@ -12,5 +12,7 @@
     <string name="store_review_detail_label">리뷰 내용</string>
     <string name="store_Date_details_label">시공 날짜</string>
     <string name="title_activity_store">StoreActivity</string>
+    <string name="store_address">주소 : 개미집</string>
+    <string name="menu_title">지역</string>
 
 </resources>

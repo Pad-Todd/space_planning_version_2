@@ -2,9 +2,12 @@ package com.spaceplanning.android.space_planning_version_2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,9 +18,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import static android.view.View.VISIBLE;
+
 public class StoreListFragment extends Fragment {
     private RecyclerView mStoreRecyclerView;
     private StoreAdapter mStoreAdapter;
+
+    // Menu-Btn & Menu-List
+    private static Button mMenuBtn;
+    private static LinearLayout mMenuBar;
 
     @Nullable
     @Override
@@ -31,6 +40,13 @@ public class StoreListFragment extends Fragment {
         updateUI();
 
         return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
     }
 
     @Override
